@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+
+    background-color: #5B3731;
+}
+
+#cabecalho {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+    background-color: #fff;
+    width: auto;
+    height: 100px;
+    padding: 0 30px;
+}
+
+
+#cabecalho #logo {display: flex;
+    margin: 10px;
+}
+
+#barraLaranja{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    height: auto;
+    padding: 15px;
+
+    background-color: #DE9761;
+}
+
+#pesquisa{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#pesquisa input{
+    width: 400px;
+    height: 30px;
+    border-radius:5px;
+    border: none;
+    padding: 0 20px;
+    outline: none;
+
+}
+
+#boxSVG{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    background-color: #fff;
+    border-radius: 5px; 
+    margin-right: 5px;
+}
+
+#pesquisa svg{
+    padding: 6px;
+    height: auto;
+    width: auto;
+    color: #5B3731;
+}
+
+
+button{
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    height: 30px;
+    width: auto;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+}
+
+button a{
+    text-decoration: none;
+}
+
+#links{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    margin: auto 0;
+}
+
+#links a{
+    text-decoration: none;
+    color: #5B3731;
+    margin-left: 10px;
+}
+
+#produtos{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-row-start: auto;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    margin: 5px;
+    padding: 10px;
+    gap: 10px;
+    width: auto;
+}
+
+#card{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: 2px;
+    border-style: solid;
+    border-color: #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+#line{
+    width: 100px;
+    height: 1px;
+    background-color: #5B3731;
+    margin: 10px 0;
+}
+
+#infoImagemProduto{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+#infoImagemProduto img{
+    width: 200px;
+    margin: auto;
+}
+
+#infosBasicas{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+
+#infosBasicas h1{
+    margin: 0 10px;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+#editarProduto{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+    height: 30px;
+    width: auto;
+    background-color: #5B3731;
+
+    border-radius: 5px; 
+}
+
+#editarProduto a{
+    font-weight: 300;
+    font-size: 15px;
+    text-decoration: none;
+    margin: 20px;
+    color: #fff;
+}
+
+#preco{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#preco span{
+    margin: 0 2px;
+    font-weight: 800;
+}
+
+#rodape{
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height:auto;
+    background-color: #fff;
+    padding: 30px;
+
+}
+
+#infoRodape{
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#infoRodape h1{
+    font-size: 16px;
+    font-weight: 900;
+}
+
+#infoRodape #line{
+    height: 1px;
+    width: 100px;
+    background-color: black;
+    margin: 10px;
+}
+
+#infosRod{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    
+}
