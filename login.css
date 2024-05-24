@@ -24,21 +24,21 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: auto;
-    width: auto;
+    height: 250px;
+    width: 250px;
     background-color: #fff;
     padding: 60px;
-    border-radius: 25px;
+    border-radius: 15px;
 }
 
 #box img{
-    width: 200px;
+    width: 120px;
     height: auto;
 }
 
 
 #box h1{
-    font-size: 20px;
+    font-size: 12px;
 }
 
 #boxLogo{
@@ -50,7 +50,7 @@ body{
 }
 
 #formLog p{
-    font-size: 14px;
+    font-size: 10px;
     margin-bottom: 3px;
     left: 0;
     margin-top: 10px;
@@ -59,23 +59,23 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: left;
+    align-items: center;
 }
 #formLog input{
     text-decoration: none;
     outline: none;
     height: 30px;
-    width: 300px;
+    width: 250px;
     padding: 0 10px;
     background-color: #ebe7e7;
     border: none;
     border-radius: 3px;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 #formLog button{
     height: 30px;
-    width: 320px;
+    width: 270px;
     margin-top: 20px;
     border: none;
     border-radius: 3px;
@@ -89,6 +89,14 @@ body{
 }
 
 #esq p {
-    font-size: 13px;
+    font-size: 10px;
     margin: 10px 0;
+}
+
+#p_input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
 }
