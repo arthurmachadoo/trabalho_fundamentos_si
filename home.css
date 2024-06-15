@@ -201,42 +201,25 @@ button a{
 }
 
 #rodape{
-    left: 0;
-    bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: auto;
-    height:auto;
+    height: 50px;
     background-color: #fff;
-    padding: 30px;
-
-}
-
-#infoRodape{
-    display: flex;
-    flex-direction: row;
-    align-items: left;
-    justify-content: space-between;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
     width: 100%;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
 }
 
-#infoRodape h1{
-    font-size: 16px;
-    font-weight: 900;
-}
-
-#infoRodape #line{
-    height: 1px;
-    width: 100px;
-    background-color: black;
-    margin: 10px;
-}
-
-#infosRod{
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
+#rodape h1{
+    font-size: 15px;
     
 }
+#rodape h1 span{
+    font-weight: 800;
+}
+

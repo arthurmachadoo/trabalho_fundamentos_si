@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pr-br">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -8,22 +8,59 @@
     <link rel="stylesheet" href="home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&display=swap" rel="stylesheet">
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            width: 300px; 
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+        }
+
+        .card img {
+            width: 100%; 
+            height: auto; 
+            border-radius: 4px;
+            object-fit: cover; 
+            max-height: 200px; 
+        }
+
+        .card h1 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .card p {
+            margin: 5px 0;
+        }
+
+        .card .editarProduto {
+            text-align: right;
+        }
+
+        .card .editarProduto a {
+            color: #007bff;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .card .editarProduto a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
     <div id="cabecalho">
-
         <div id="logo">
             <img src="Ativo 1.png" alt="">
         </div>
-
         <div id="links">
             <a href="">Dashboards</a>
             <a href="">Estoque</a>
-            <a href="">Informações</a>
             <a href="">Sobre Nós</a>
         </div>
     </div>
@@ -32,92 +69,111 @@
         <div id="pesquisa">
             <div id="boxSVG">
                 <?xml version="1.0" ?>
-                <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
-                    enable-background="new 0 0 139 139" height="139px" id="Find" version="1.1" viewBox="0 0 139 139"
-                    width="139px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <path
-                        d="M127.558,111.961L100.249,84.65c4.64-7.387,7.333-16.118,7.333-25.488c0-26.509-21.49-47.996-47.998-47.996  c-26.508,0-47.996,21.487-47.996,47.996c0,26.51,21.487,47.995,47.996,47.995c10.197,0,19.642-3.188,27.414-8.605l26.984,26.986  c1.875,1.873,4.333,2.806,6.788,2.806c2.458,0,4.913-0.933,6.791-2.806C131.308,121.787,131.308,115.711,127.558,111.961z   M59.584,91.607c-17.917,0-32.443-14.525-32.443-32.443S41.667,26.72,59.584,26.72c17.918,0,32.443,14.526,32.443,32.444  S77.502,91.607,59.584,91.607z" />
+                <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+                <svg enable-background="new 0 0 139 139" height="139px" id="Find" version="1.1" viewBox="0 0 139 139" width="139px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path d="M127.558,111.961L100.249,84.65c4.64-7.387,7.333-16.118,7.333-25.488c0-26.509-21.49-47.996-47.998-47.996  c-26.508,0-47.996,21.487-47.996,47.996c0,26.51,21.487,47.995,47.996,47.995c10.197,0,19.642-3.188,27.414-8.605l26.984,26.986  c1.875,1.873,4.333,2.806,6.788,2.806c2.458,0,4.913-0.933,6.791-2.806C131.308,121.787,131.308,115.711,127.558,111.961z   M59.584,91.607c-17.917,0-32.443-14.525-32.443-32.443S41.667,26.72,59.584,26.72c17.918,0,32.443,14.526,32.443,32.444  S77.502,91.607,59.584,91.607z" />
                 </svg>
             </div>
-    
-            <input type="text" placeholder="Pesquise pelo nome do produto">
+            <input type="text" id="searchInput" placeholder="Pesquise pelo nome do produto">
         </div>
-    
         <div id="Add">
             <button> <a href="addProduto.html">Adicionar Produtos</a></button>
         </div>
-
     </div>
 
     <div id="produtos">
-
-        <div id="card">
-            <div id="infoImagemProduto">
-                <img src="camisa-atletico-jogo-1-masculino_01.png" alt="">
-                <h1>Camisa Atlético Mineiro</h1>
-
-            </div>
-
-
-            <div id="preco">
-                <p>R$<span>299</span>,00</p>
-
-            </div>
-
-            <div id="line">
-            </div>
-
-            <div id="infosBasicas">
-                <h1>Quantidade</h1>
-                <h1>Validade</h1>
-                <h1>Inserção</h1>
-            </div>
-
-            <div id="editarProduto">
-                <a href="">Editar</a>
-            </div>
-            
-
-        </div>
-
-        
-
+        <!-- Os novos cards serão adicionados aqui -->
     </div>
 
     <div id="rodape">
-        <div id="infoRodape">
-            <div id="infosRod">
-                <h1>Início</h1>
-                <div id="line"></div>
-                <p>Home</p>
-                <p>Cursos</p>
-                <p>Downloads</p>
-            </div>
-
-            <div id="infosRod">
-                <h1>Sobre Nós</h1>
-                <div id="line"></div>
-                <p>Informações da Empresa</p>
-                <p>Contato</p>
-                <p>Blog</p>
-            </div>
-
-            <div id="infosRod">
-                <h1>Suporte</h1>
-                <div id="line"></div>
-                <p>FAQ</p>
-                <p>Telefones</p>
-                <p>Chat</p>
-            </div>
-
-            <div id="infosRod">
-                <h1>Informações</h1>
-                <div id="line"></div>
-                <p>Lorem ipsum dolor sit.</p>
-            </div>
-        </div>
+        <h1> <span>© 2024 Estoque Plus.</span> All rights reserved.</h1>
     </div>
+
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            carregarProdutos();
+
+            // Adiciona ouvinte de eventos para o campo de busca
+            document.getElementById('searchInput').addEventListener('input', function () {
+                const query = this.value.trim().toLowerCase();
+                const cards = document.querySelectorAll('.card');
+
+                if (query === "") {
+                    cards.forEach(card => card.style.display = 'block');
+                } else {
+                    cards.forEach(card => {
+                        const productName = card.querySelector('h1').textContent.toLowerCase();
+                        if (productName === query) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                }
+            });
+
+            // Carrega os produtos do localStorage ao iniciar a página
+            function carregarProdutos() {
+                const produtos = JSON.parse(localStorage.getItem('produtos')) || [];
+                const produtosContainer = document.getElementById('produtos');
+                produtos.forEach(produto => {
+                    const card = createCard(produto);
+                    produtosContainer.appendChild(card);
+                });
+                adicionarEventosExcluir();
+            }
+
+            // Função para criar um card com base nos dados do produto
+            function createCard(produto) {
+                const card = document.createElement('div');
+                card.classList.add('card');
+                card.innerHTML = `
+                    <div class="infoImagemProduto">
+                        <img src="${produto.foto}" alt="${produto.nome}">
+                        <h1>${produto.nome}</h1>
+                    </div>
+                    <div class="preco">
+                        <p>R$ ${produto.preco}</p>
+                    </div>
+                    <div class="infosBasicas">
+                        <h1>Quantidade: ${produto.quantidade}</h1>
+                        <h1>Validade: ${produto.validade}</h1>
+                        <h1>Inserção: ${produto.insercao}</h1>
+                    </div>
+                    <div class="editarProduto">
+                        <a href="#" class="excluir-link">Excluir</a>
+                    </div>
+                `;
+                return card;
+            }
+
+            // Adiciona evento de exclusão aos links "Excluir"
+            function adicionarEventosExcluir() {
+                document.querySelectorAll('.excluir-link').forEach(link => {
+                    link.addEventListener('click', function (event) {
+                        event.preventDefault();
+                        const card = this.closest('.card');
+                        if (card) {
+                            card.remove(); // Remove o card do DOM
+
+                            // Remove o produto do armazenamento local (localStorage)
+                            const nomeProduto = card.querySelector('h1').textContent;
+                            removerProdutoLocalStorage(nomeProduto);
+                        }
+                    });
+                });
+            }
+
+            // Remove produto do localStorage
+            function removerProdutoLocalStorage(nomeProduto) {
+                const produtos = JSON.parse(localStorage.getItem('produtos')) || [];
+                const novosProdutos = produtos.filter(produto => produto.nome !== nomeProduto);
+                localStorage.setItem('produtos', JSON.stringify(novosProdutos));
+            }
+        });
+    </script>
 </body>
 
 </html>
