@@ -9,48 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&display=swap" rel="stylesheet">
-    <style>
-        .card {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-            width: 300px; 
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
-        }
-
-        .card img {
-            width: 100%; 
-            height: auto; 
-            border-radius: 4px;
-            object-fit: cover; 
-            max-height: 200px; 
-        }
-
-        .card h1 {
-            font-size: 18px;
-            margin: 10px 0;
-        }
-
-        .card p {
-            margin: 5px 0;
-        }
-
-        .card .editarProduto {
-            text-align: right;
-        }
-
-        .card .editarProduto a {
-            color: #007bff;
-            cursor: pointer;
-            text-decoration: none;
-        }
-
-        .card .editarProduto a:hover {
-            text-decoration: underline;
-        }
-    </style>
 </head>
 
 <body>
@@ -135,12 +93,14 @@
                         <h1>${produto.nome}</h1>
                     </div>
                     <div class="preco">
-                        <p>R$ ${produto.preco}</p>
+                        <p>R$ <span>${produto.preco}</span>,00</p>
                     </div>
                     <div class="infosBasicas">
                         <h1>Quantidade: ${produto.quantidade}</h1>
-                        <h1>Validade: ${produto.validade}</h1>
-                        <h1>Inserção: ${produto.insercao}</h1>
+                        <div class="dados">
+                            <h1>Validade: ${produto.validade}</h1>
+                            <h1>Inserção: ${produto.insercao}</h1>
+                        </div>
                     </div>
                     <div class="editarProduto">
                         <a href="#" class="excluir-link">Excluir</a>

@@ -114,7 +114,8 @@ button a{
     align-items: center;
     justify-items: center;
     justify-content: center;
-    margin: 5px;
+    margin-top: 10px;
+    margin-bottom: 70px;
     padding: 10px;
     gap: 10px;
     width: auto;
@@ -209,7 +210,7 @@ button a{
     background-color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
+    position:fixed;
     bottom: 0;
     width: 100%;
     box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
@@ -221,5 +222,88 @@ button a{
 }
 #rodape h1 span{
     font-weight: 800;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    width: 300px; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+}
+.infoImagemProduto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.card img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px; 
+    height: 200px; 
+    border-radius: 4px;
+    object-fit: cover; 
+    max-height: 200px;
+}
+
+.infosBasicas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dados{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card h1 {
+    font-size: 12px;
+    margin: 5px;
+}
+.infoImagemProduto h1{
+    font-size: 20px;
+    font-weight: 700;
+}
+.card p {
+    font-size: 12px;
+    margin: 5px 0;
+}
+.preco span{
+    font-size: 15px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.card .editarProduto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    padding: 0 80px;
+    border-radius: 5px;
+    background-color: #5B3731;
+    margin-top: 5px;
+}
+
+.card .editarProduto a {
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.card .editarProduto a:hover {
+    text-decoration: underline;
 }
 
