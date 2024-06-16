@@ -42,7 +42,6 @@
     <div id="produtos">
         <!-- Os novos cards serão adicionados aqui -->
     </div>
-
     <div id="rodape">
         <h1> <span>© 2024 Estoque Plus.</span> All rights reserved.</h1>
     </div>
@@ -82,12 +81,12 @@
                 });
                 adicionarEventosExcluir();
             }
-
             // Função para criar um card com base nos dados do produto
             function createCard(produto) {
                 const card = document.createElement('div');
                 card.classList.add('card');
                 card.innerHTML = `
+                <div class="tudo">
                     <div class="infoImagemProduto">
                         <img src="${produto.foto}" alt="${produto.nome}">
                         <h1>${produto.nome}</h1>
@@ -105,6 +104,7 @@
                     <div class="editarProduto">
                         <a href="#" class="excluir-link">Excluir</a>
                     </div>
+                </div>
                 `;
                 return card;
             }

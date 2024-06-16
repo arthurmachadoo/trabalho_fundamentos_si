@@ -236,6 +236,13 @@ button a{
     width: 300px; 
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
 }
+.tudo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
 .infoImagemProduto{
     display: flex;
     flex-direction: column;
