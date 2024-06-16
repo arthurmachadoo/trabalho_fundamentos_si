@@ -1,41 +1,161 @@
+/* estoque.css */
+
 * {
     margin: 0;
-
+    padding: 0;
+    box-sizing: border-box;
     font-family: "Lato", sans-serif;
     font-weight: 400;
     font-style: normal;
-}
-
-body{
-
-    background-color: #5B3731;
-}
-#cabecalho {
+ }
+ 
+ body {
+    height: 100vh;
+    background-color: #5b3731;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 150px;
+ }
+ 
+ 
+ #cabecalho {
     display: flex;
     flex-direction: row;
     text-align: center;
     justify-content: space-between;
     background-color: #fff;
-    width: auto;
+    width: 100%;
     height: 100px;
     padding: 0 30px;
-}
-
-
-#cabecalho #logo {display: flex;
+ }
+ 
+ 
+ #cabecalho #logo {display: flex;
     margin: 10px;
-}
-
-#links{
+ }
+ 
+ #links{
     display: flex;
     flex-direction: row;
     text-align: center;
     justify-content: center;
     margin: auto 0;
-}
-
-#links a{
+ }
+ 
+ #links a{
     text-decoration: none;
     color: #5B3731;
     margin-left: 10px;
-}
+ }
+ 
+ .container {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 80%;
+    max-width: 750px;
+    margin-top: 30px;
+ 
+    header {
+       text-align: center;
+       margin-bottom: 30px;
+    }
+ 
+    header h1 {
+       margin: 0;
+       font-size: 2em;
+       color: #333;
+       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+ 
+    header p {
+       margin: 5px 0 0;
+       font-size: 1em;
+       color: #666;
+       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+ 
+    section {
+       margin-bottom: 30px;
+    }
+ 
+    section h2 {
+       font-size: 1.5em;
+       color: #333;
+       margin-bottom: 15px;
+       border-bottom: 2px solid #5b3731;
+       padding-bottom: 5px;
+       text-align: center; /* Centraliza o título */
+    }
+ 
+    table {
+       width: 100%;
+       border-collapse: collapse;
+       margin-bottom: 20px;
+       background-color: #ffffff;
+       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+       border-radius: 8px;
+       overflow: hidden;
+       font-family: "Arial", sans-serif;
+    }
+ 
+    table th,
+    table td {
+       padding: 10px;
+       text-align: left;
+       border-bottom: 1px solid #ddd;
+    }
+ 
+    table th {
+       background-color: #f4f4f4;
+       color: #333;
+       font-weight: bold;
+       text-align: center;
+    }
+ 
+    table tbody tr:nth-child(even) {
+       background-color: #f9f9f9;
+    }
+ 
+    table tbody tr:hover {
+       background-color: #f1f1f1;
+    }
+ 
+    table tbody tr td {
+       border-right: 1px solid #ddd;
+       text-align: center;
+    }
+ 
+    table tbody tr td:last-child {
+       border-right: none;
+    }
+ }
+    
+ #rodape{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    background-color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+ }
+ 
+ #rodape h1{
+    font-size: 15px;
+    
+ }
+ #rodape h1 span{
+    font-weight: 700;
+ }
+ 
+ 
