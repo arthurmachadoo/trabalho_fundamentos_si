@@ -16,9 +16,9 @@
         </div>
 
         <div id="links">
-            <a href="">Dashboards</a>
-            <a href="">Estoque</a>
-            <a href="">Sobre Nós</a>
+            <a href="dashboards.html">Dashboards</a>
+            <a href="home.html">Estoque</a>
+            <a href="sobreNos.html">Sobre Nós</a>
         </div>
     </div>
     <div class="container">
@@ -28,83 +28,94 @@
         </header>
         <section>
             <h2>Produtos em Estoque</h2>
-            <table>
+            <table id="produtos-estoque">
                 <thead>
                     <tr>
                         <th>Produto</th>
                         <th>Quantidade</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>Produto A</td>
-                        <td>120</td>
-                    </tr>
-                    <tr>
-                        <td>Produto B</td>
-                        <td>85</td>
-                    </tr>
-                    <tr>
-                        <td>Produto C</td>
-                        <td>70</td>
-                    </tr>
-                </tbody>
+                <tbody></tbody>
             </table>
         </section>
         <section>
             <h2>Produtos Próximos da Validade</h2>
-            <table>
+            <table id="produtos-validade">
                 <thead>
                     <tr>
                         <th>Produto</th>
                         <th>Data de Validade</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>Produto D</td>
-                        <td>20/06/2024</td>
-                    </tr>
-                    <tr>
-                        <td>Produto E</td>
-                        <td>25/06/2024</td>
-                    </tr>
-                    <tr>
-                        <td>Produto F</td>
-                        <td>30/06/2024</td>
-                    </tr>
-                </tbody>
+                <tbody></tbody>
             </table>
         </section>
         <section>
             <h2>Produtos com Estoque Baixo</h2>
-            <table>
+            <table id="produtos-estoque-baixo">
                 <thead>
                     <tr>
                         <th>Produto</th>
                         <th>Quantidade</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>Produto G</td>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>Produto H</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td>Produto I</td>
-                        <td>2</td>
-                    </tr>
-                </tbody>
+                <tbody></tbody>
             </table>
         </section>
     </div>
+    <div id="rodape">
+        <h1> <span>© 2024 Estoque Plus.</span> All rights reserved.</h1>
+    </div>
+    
+    
 
     <div id="rodape">
         <h1> <span>© 2024 Estoque Plus.</span> All rights reserved.</h1>
     </div>
+
+    <script>
+
+  
+        document.addEventListener("DOMContentLoaded", function () {
+            // Recuperar dados do local storage
+            const produtos = JSON.parse(localStorage.getItem("produtos")) || [];
+         
+            const dadosEstoque = produtos.filter((produto) => produto.quantidade > 10);
+            const dadosValidade = produtos.filter((produto) => {
+               const hoje = new Date();
+               const validade = new Date(produto.validade);
+               const diffTime = validade - hoje;
+               const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+               return diffDays <= 30;
+            });
+            const dadosEstoqueBaixo = produtos.filter(
+               (produto) => produto.quantidade <= 10
+            );
+         
+            // Função para popular tabela
+            function popularTabela(idTabela, dados, campos) {
+               const tabela = document
+                  .getElementById(idTabela)
+                  .getElementsByTagName("tbody")[0];
+               tabela.innerHTML = "";
+               dados.forEach((dado) => {
+                  const row = tabela.insertRow();
+                  campos.forEach((campo) => {
+                     const cell = row.insertCell();
+                     cell.textContent = dado[campo];
+                  });
+               });
+            }
+         
+            // Popula as tabelas
+            popularTabela("produtos-estoque", dadosEstoque, ["nome", "quantidade"]);
+            popularTabela("produtos-validade", dadosValidade, ["nome", "validade"]);
+            popularTabela("produtos-estoque-baixo", dadosEstoqueBaixo, [
+               "nome",
+               "quantidade",
+            ]);
+         });
+         
+        </script>
 </body>
 </html>
